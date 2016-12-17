@@ -18,13 +18,4 @@ mixin archiveList()
 
 block body
     +archiveList()
-
-//- block body
-//-     section.archive
-//-         ul.post-archive
-//-             - page.posts.each(function(post) {
-//-                 li.post-item
-//-                     span.post-date #{date(post.date, "YYYY-MM-DD")}
-//-                     a(class="post-title" href=url_for(post.path)) #{post.title}
-//-             - })
     include _partial/paginator.pug
