@@ -1,0 +1,8 @@
+header
+    .blog-title
+        a(href=url_for() class="logo") #{config.title}
+    nav.navbar
+        ul.menu
+            each url, name in theme.menu
+                li.menu-item
+                    a(href=url_for(url) class="menu-item-link") #{__('Menu.' + name)}    

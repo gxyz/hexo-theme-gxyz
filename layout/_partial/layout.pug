@@ -1,0 +1,17 @@
+doctype html
+html
+    include head.pug
+    body
+        .cotainer
+            include header.pug
+            main.main
+                block body
+
+        div#top-button 
+            img(src=url_for("images/top-button.png") alt="top-button")
+        script(src=url_for("js/prettify.min.js"))
+        script(src=url_for("js/jquery.min.js"))
+        script(src=url_for("js/main.js"))
+
+
+

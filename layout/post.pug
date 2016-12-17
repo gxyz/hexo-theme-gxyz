@@ -1,0 +1,18 @@
+extends _partial/layout.pug
+
+block body
+    article.post
+        .post-title
+            h2.title #{page.title}
+        .post-meta
+            span.post-time #{date(page.date, "YYYY-MM-DD")}
+        .post-content !{page.content}
+        if (page.prev)
+            span.new-post.other  
+                a(href=url_for(page.prev.path)) 新文章: #{page.prev.title}
+        if (page.next)
+            span.old-post.other  
+                a(href=url_for(page.next.path)) 旧文章: #{page.next.title}
+
+        
+        div.post-menu !{toc(page.content, false)}

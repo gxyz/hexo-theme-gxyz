@@ -1,0 +1,9 @@
+head
+    meta(charset="utf-8")
+    meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport")
+    title #{config.title}
+    link(rel="stylesheet", href=url_for("css/style.css"))
+    link(rel="stylesheet", href=url_for("css/tomorrow-night-bright.min.css"))
+
+    - var xml = config.url + '/atom.xml'
+        link(rel="search", type="application/opensearchdescription+xml", href=xml, title=config.title)

@@ -1,0 +1,16 @@
+extends _partial/layout.pug
+
+block body
+    section.posts
+        - page.posts.each(function(post) {
+            article.post
+                .post-title
+                    h2
+                        a(class="post-title-link" href=url_for(post.path)) #{post.title}
+                .post-content !{post.excerpt}
+                .post-meta
+                    span.post-time #{date(post.date, "YYYY-MM-DD")}
+                .more 
+                    a(class="post-title-link" href=url_for(post.path)) Read More...
+        - })
+    include _partial/paginator.pug
