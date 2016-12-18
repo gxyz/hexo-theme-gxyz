@@ -1,21 +1,6 @@
 extends _partial/layout.pug
 
-mixin archiveList()
-    .archive
-        ul.post-archive
-            - var year = 0;
-            - var change = false;
-            - page.posts.each(function (post) {
-                - var postYear = date(post.date, 'YYYY') - 0;
-                - change = year !== postYear;
-                - year = change ? postYear : year;
-                if change 
-                    h2.archive-year!= year
-                li.post-item
-                    a(class="post-title" href=url_for(post.path)) #{post.title}
-                    span.post-date #{date(post.date, "MMM D")}
-            - })
-
 block body
+    include mixins/archive.pug
     +archiveList()
     include _partial/paginator.pug
