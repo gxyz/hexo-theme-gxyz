@@ -6,4 +6,6 @@ Menu:
 Paginator:
   Prev: Prev
   Next: Next
-
+Post:
+  Old: old
+  New: new

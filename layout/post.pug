@@ -9,10 +9,10 @@ block body
         .post-content !{page.content}
         if (page.prev)
             span.new-post.other  
-                a(href=url_for(page.prev.path)) 新文章: #{page.prev.title}
+                a(href=url_for(page.prev.path)) #{ __('Post.New')}: #{page.prev.title}
         if (page.next)
             span.old-post.other  
-                a(href=url_for(page.next.path)) 旧文章: #{page.next.title}
+                a(href=url_for(page.next.path)) #{ __('Post.Old')}: #{page.next.title}
 
         
         div.post-menu !{toc(page.content, false)}
