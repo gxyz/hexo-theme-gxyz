@@ -21,7 +21,12 @@
     ```
     npm install hexo-generator-sitemap
     npm install hexo-generator-feed
+    
+    ```
+    另外还需要一个插件:
+    ```
+    npm install hexo-generator-archive
     ```
 
-.....
+未完待续.....
 
