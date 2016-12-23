@@ -6,6 +6,7 @@ block body
             h2.title #{page.title}
         .post-meta
             span.post-time #{date(page.date, "YYYY-MM-DD")}
+            span#show-post-list 显示文章目录
         .post-content !{page.content}
         if (page.prev)
             span.new-post.other  
@@ -15,7 +16,7 @@ block body
                 a(href=url_for(page.next.path)) #{ __('Post.Old')}: #{page.next.title}
 
         
-        div.post-menu !{toc(page.content, false)}
+        div#post-list !{toc(page.content, false)}
 
 
         include _partial/comments.pug
