@@ -17,16 +17,18 @@
         auto_detect: false
     ```
 
-3. 要开启atom.xml和sitemap.xml,需要安装两个插件:
+3. 由于模板使用的 pug,因此需要安装插件支持:
     ```
-    npm install hexo-generator-sitemap
-    npm install hexo-generator-feed
-    
+    npm install hexo-render-pug --save
     ```
-    另外还需要一个插件:
+
+4. 要开启atom.xml,sitemap.xml,和归档不分页，需要安装三个插件:
     ```
-    npm install hexo-generator-archive
+    npm install hexo-generator-sitemap --save
+    npm install hexo-generator-feed --save
+    npm install hexo-generator-archive --save
     ```
 
 未完待续.....
+
 
