@@ -16,7 +16,7 @@ block body
                 a(href=url_for(page.next.path)) #{ __('Post.Old')}: #{page.next.title}
 
         
-        div#post-list !{toc(page.content, false)}
+        div#post-list !{toc(page.content, true)}
 
 
         include _partial/comments.pug
