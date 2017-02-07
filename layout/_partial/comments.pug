@@ -1,7 +1,7 @@
-if theme.comments.duoshuo
+if config.comments.duoshuo
     .ds-thread(data-thread-key=page.path, data-title=page.title, data-url=page.permalink, data-author-key='1')
     script.
-        var duoshuoQuery = {short_name:"#{theme.duoshuo}"};
+        var duoshuoQuery = {short_name:"#{config.comments.duoshuo}"};
         (function() {
             var ds = document.createElement('script');
             ds.type = 'text/javascript';ds.async = true;
