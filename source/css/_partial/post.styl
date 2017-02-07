@@ -19,16 +19,35 @@
 }
 
 .post {
+
+  h1:before {
+    content: "# ";
+    color: green;
+  }
+
+  h2:before {
+    content: "## ";
+    color: green;
+    font-size: 0.8em;
+  }
+
+  h3:before {
+    content: "### ";
+    color: green;
+  }
+
+  h4:before {
+    content: "#### ";
+    color: green;
+  }
+
+
   background-color: #fff;
 
   p {
       font-size: 0.9em;
       line-height: 1.5;
       letter-spacing: 0.5px;
-  }
-
-  h2 {
-      font-size: 1.8em;
   }
 
   .post-meta  {
@@ -79,7 +98,7 @@
   }
 
   // post list
-  #post-list {
+  #toc {
     width: 300px;
     position: fixed;
     font-size: 13px;

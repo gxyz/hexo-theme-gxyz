@@ -6,12 +6,15 @@ html
             include header.pug
             main.main
                 block body
+                
+        include copyright.pug
 
         div#top-button 
             img(src=url_for("images/top-button.png") alt="top-button")
-        script(src=url_for("js/prettify.min.js"))
+        
+        script(src="//cdn.bootcss.com/highlight.js/9.9.0/highlight.min.js")
         script(src=url_for("js/jquery.min.js"))
         script(src=url_for("js/main.js"))
 
-
+        
 

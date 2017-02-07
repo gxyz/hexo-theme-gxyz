@@ -1,6 +1,8 @@
 $(document).ready(function() {
-    $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
-    prettyPrint();
+
+    $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+    });
 
     $("#top-button").hide()//隐藏go to top按钮
     $(function() {
@@ -20,16 +22,17 @@ $(document).ready(function() {
         return false;
     });
 
-    $("#show-post-list").click(function () {
-        if ($("#post-list").css("right") !== "0px") {
-            $("#post-list").animate({right:'0px'});
-            $("body").animate({paddingRight:'320px'});
-            $("#show-post-list").text("隐藏文章目录");
-        } else {
-            $("#post-list").animate({right:'-320px'});
-            $("body").animate({paddingRight:'0px'});
-            $("#show-post-list").text("显示文章目录");
-        }
-    })
+    // 文章菜单显示与隐藏
+    // $("#show-post-list").click(function () {
+    //     if ($("#toc").css("right") !== "0px") {
+    //         $("#toc").animate({right:'0px'});
+    //         $("body").animate({paddingRight:'320px'});
+    //         $("#show-post-list").text("隐藏文章目录");
+    //     } else {
+    //         $("#toc").animate({right:'-320px'});
+    //         $("body").animate({paddingRight:'0px'});
+    //         $("#show-post-list").text("显示文章目录");
+    //     }
+    // })
     
 })
