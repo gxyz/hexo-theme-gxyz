@@ -15,6 +15,9 @@
         enable: false
         line_number: false
         auto_detect: false
+
+    comments:
+        duoshuo: duoshuo_shortname  # 这里用来设置多说评论 
     ```
 
 3. 由于模板使用的 pug,因此需要安装插件支持:
