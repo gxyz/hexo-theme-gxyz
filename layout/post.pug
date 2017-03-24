@@ -8,6 +8,7 @@ block body
             span.post-time #{date(page.date, "YYYY-MM-DD")}
             //- span#show-post-list 显示文章目录
         .post-content !{page.content}
+
         if (page.prev)
             span.new-post.other  
                 a(href=url_for(page.prev.path)) #{ __('Post.New')}: #{page.prev.title}

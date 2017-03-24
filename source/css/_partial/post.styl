@@ -21,23 +21,23 @@
 .post {
 
   h1:before {
-    content: "# ";
+    content: "";
     color: green;
   }
 
   h2:before {
-    content: "## ";
+    content: " ";
     color: green;
     font-size: 0.8em;
   }
 
   h3:before {
-    content: "### ";
+    content: "  ";
     color: green;
   }
 
   h4:before {
-    content: "#### ";
+    content: "   ";
     color: green;
   }
 
@@ -68,10 +68,11 @@
     border: 1px solid #000;
     padding: 5px 10px;
     height: 14px;
-    border-radius: 20px; 
+    border-radius: 5px; 
     text-decoration: none;
     line-height: 14px;
     font-size: 14px;
+    margin-bottom: 50px;
   }
   .other a {
     text-decoration: none;
@@ -81,20 +82,8 @@
     float: left;
   }
 
-  .old-post::before {
-    content: "<"
-    display: inline-block;
-    font-size: 20px;
-
-  }
   .new-post {
     float: right;
-  }
-  .new-post::after {
-    content: ">"
-    display: inline-block;
-    font-size: 20px;
-
   }
 
   // post list
